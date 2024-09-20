@@ -1,0 +1,35 @@
+                          # Cafe management 
+
+menue = {
+    'pizza':40,
+    'pasta':30,
+    'salad':50,
+    'coffee':60,
+    'water':90,
+}
+
+#Greet
+print("Welcome to the PYTHON RESTUARENT")
+print("Pizza = Rs40\n""Pasta = Rs30\n""Salad = Rs50\n""Coffee = Rs60\n""Water = Rs90\n")
+
+order_total = 0
+#50 + 30 = 80
+
+item_1 = input("Enter the name of item you want to order = ")
+if item_1 in menue:
+    order_total += menue[item_1]
+    print(f"Your item {item_1} has been dded to your order")
+else:
+    print(f"Ordered item {item_1} is not available yet!")
+
+another_order = input("Do you want to add another item? (Yes/No)")
+if another_order == "Yes":
+    item_2 = input("Enter the name of your second item = ")
+    if item_2 in menue:
+        order_total += menue[item_2]
+        print(f"Item {item_2} has been added to order")
+    else:
+        print(f"Ordered item {item_2} is not available yet!")
+
+print(f"The total amount of item is {order_total}")
+
