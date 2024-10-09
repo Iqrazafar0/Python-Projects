@@ -1,0 +1,158 @@
+                              #one_short_python
+
+#sum of two numbers (also perform other functions by just change the sign like (*, -, /, %))
+x = 5
+y = 8
+sum = x + y
+print(sum)
+
+#print data type of your variable (data-types -- string("IQRA"), integer(5), float(1.222), char('A'))
+x = 134
+y = 'apple'
+print(type(x))
+print(type(y))
+
+#slicing method (you cn print the part of word by chosing the index)
+x = "Hello world!"
+print(x[0:5])
+
+#built-in functions
+x = "Iqra Zafar"
+print(x.upper())
+print(x.lower())
+
+#concetenation of two strings (you can also concetinate other data-types)
+x = "Iqra"
+y = "Zafar"
+print(x + " " + y) #also concetenate 2 diffrent lists
+
+#data-types in python (1.lists, 2.tuples, 3.sets, 4.dictionaries) --Threre is no array in python but lists.
+
+#using lists --using square brakets[] --can be modified
+
+list1 = ["Apple", "banana", "kiwi", "mango", "cherry"]
+list2 = list1.copy() #copy the list1
+print(list2)
+print(list1) #this list will print
+print(len(list1)) #print length of this list
+print(list1[0:2]) #this is the range function in python  --index start from '0'
+list1.append("kiwi") #attach at the end of the list
+print(list1)
+list1.insert(1, "mango") #attach where you want by index
+print(list1)
+list1.remove("banana") #to remove required element
+print(list1)
+list1.clear() #to clear the list
+print(list1)
+list1.sort() #to print items alhabeticaly --also sort integers list
+list1.sort(reverse=True) #print the list in decending order
+print(list1)
+
+#Using Tuples --using parenthesis() --cannot be modified (but using typecasting)
+
+tup1 = ("Apple", "banana", "kiwi", "mango", "cherry")
+print(tup1)  #also do all other things like as lists
+
+#using type-casting in tuples foe modification
+
+x = list(tup1)
+x[1] = "orange" #Also do by .insert method --x.insert(1, "orange")
+tup1 = tuple(x)
+print(tup1)
+print(type(tup1)) #find type of this
+
+#using sets --curly brakets{} --unordered & unindexed
+
+set1 = {"Apple", "banana", "kiwi", "mango", "cherry", "mango"}
+
+#for add something in set use 'add function' -- to remove some item use 'remove function'
+
+set1.add("orange")
+print(set1)
+print(type(set1))
+print(len(set1)) 
+
+#use for loop to print 1 item at 1 line
+for x in set1:
+    print(x)
+
+#concetinate 2 sets
+set2 = {1, 2, 3, 4, 5}
+set3 = set1.union(set2) #also use update function
+print(set3)
+
+#using dictionary --store value in key & value form --ordered, changable, do not allow duplicate
+# brand == key , toyota == key value
+dict = {
+    "brand" : "toyota",
+    "modal" : "grande",
+    "year" : 2000
+}
+print(dict)
+print(dict["year"])
+print(len(dict))
+
+#access keys of dictionary
+x = dict.keys()
+print(x)
+
+#access values of dictionary
+x = dict.values()
+print(x)
+
+#access items
+x = dict.items()
+print(x)
+
+#update values
+dict.update({"year":2020})
+print(dict)
+
+#add new values
+dict["color"] = "red"
+print(dict)
+
+#remove item -- use pop function
+dict.pop("year")
+print(dict)
+
+                        #Conditional Statements
+#if-else condition
+
+num = 3
+
+if num%2 ==0:
+    print("even num")
+else:
+    print("odd num")
+
+#elif condition
+
+num = 3
+if num == 0:
+   print("num is zero")
+elif num%2 ==0:
+    print("even num")
+else:
+   print("odd num")
+
+#while loop
+i=1
+while i<11:
+    print(i)
+    i += 1
+
+#for loop
+for x in range(11):
+    print(x)
+    #table of 5
+    num = 5
+    for x in range(11):
+        print(num*x)
+
+#functions in python
+def add(num1, num2):
+    sum = num1 + num2
+    return sum
+
+print(add(10, 20))
